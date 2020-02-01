@@ -8,8 +8,9 @@ router.get('/', function(req, res, next) {
     // res.sendFile('./../views/condition-general/index.html');
     // res.sendFile(path.resolve(router.get('./../views/condition-general') + '/index.html'));
 
-    return res.sendFile(__dirname + "./../views/condition-general/index.html");
+    // return res.sendFile(__dirname + "./../views/condition-general/index.html");
 
+    res.sendFile('./../views/condition-general/index.html', { root: __dirname });
 
     // res.sendFile('index.html', { root: path.join(__dirname, './../views/condition-general') });
 
