@@ -4,7 +4,7 @@ var router = express.Router();
 /* GET home page. */
 router.get('/', function(req, res, next) {
     // res.render('index', { title: 'Express' });
-    res.sendFile('./../views/condition-general/index.html');
+    res.sendFile('index.html', { root: __dirname });
     // res.sendFile(path.resolve(__dirname, 'views', 'dist','Mreyet0', 'index.html'))
 });
 
