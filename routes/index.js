@@ -6,7 +6,7 @@ var path = require('path');
 router.get('/', function(req, res, next) {
     // res.render('index', { title: 'Express' });
     // res.sendFile('./../views/condition-general/index.html');
-    res.sendFile(path.resolve(app.get('./../views/condition-general') + '/index.html'));
+    res.sendFile(path.resolve(router.get('./../views/condition-general') + '/index.html'));
 
     // res.sendFile('index.html', { root: path.join(__dirname, './../views/condition-general') });
 
