@@ -21,7 +21,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 
 app.use(express.static(path.join(__dirname, 'public')));
-app.use(express.static(path.join(__dirname, 'views/condition-general')));
+app.use(express.static(path.join(__dirname, 'views/dist/condition-general')));
 
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
@@ -29,6 +29,9 @@ app.use('/users', usersRouter);
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
     next(createError(404));
+});
+app.all('*', (req, res) => {
+    res.status(200).sendFile(path.join(__dirname, 'views/dist/condition-general/index.html'));
 });
 
 // error handler
